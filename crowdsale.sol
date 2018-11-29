@@ -5,44 +5,40 @@ contract token {
     uint public decimals =18;
     string public symbol ="CDS";
     uint public noOfTokensPerEth;
-    uint public totalFund;
     uint public targetAmount;
+    uint public _totaltokens;
     bool crowdsaleClosed = false;
-    // test 
     uint public amountRaised;
     event FundTransfer(address _to, uint _tokens, bool isContribution);
     event Transfer(address _from,address _to,uint _ether);
-    mapping (address => uint)balances;
-    function token(uint _totaltokens,uint noOfTokensPerEther,uint amount)public{
-        balances[msg.sender] = _totaltokens;
-        targetAmount = amount;
+    event FundTransfer1(address, uint, bool);
+    mapping (address => uint) public balances;
+function token(uint _totaltokens,uint noOfTokensPerEther,uint targetamount)public{
+        balances[msg.sender] = _totaltokens;//giving intial tokens
+        targetAmount = targetamount;
         noOfTokensPerEth = noOfTokensPerEther;
     }
-    function balanceOf(address _owner) public returns(uint){
-        return balances[_owner];
-    }
-        event FundTransfer1(address, uint, bool);
+// function balanceOf(address _owner) public returns(uint balance){
+//         return balances[_owner];
+//     }
+
     function () payable external {
         require(!crowdsaleClosed);
         uint amount = msg.value;
         balances[msg.sender] += amount;
-        amountRaised += amount;
+       amountRaised += amount;
         balances[msg.sender] -= msg.value;
-        
-           
-       emit FundTransfer1(msg.sender, amount, true);
+        getEther(msg.sender,amount);
+        emit FundTransfer1(msg.sender, amount, true);
     }
-
-
-    
     function isOwned() public {
         _owner =msg.sender;
     }
     function getEther(address _to,uint _ether) public returns(bool success){
         require(!crowdsaleClosed);
-        if(balances[_to]>0 && _ether > 0 && _ether <=10){
-            totalFund += _ether;
+        if(_ether > 0 && _ether <=10){
             uint tempToken = _ether * noOfTokensPerEth;
+            _totaltokens = balances[msg.sender]-tempToken;
             transferTokens(_to,tempToken);
             emit FundTransfer(_to,_ether,true);
             return true;
