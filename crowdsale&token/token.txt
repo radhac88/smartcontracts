@@ -1,0 +1,52 @@
+pragma solidity ^0.4.25;
+
+contract myToken {
+    
+    string public name;
+    string public symbol;
+    uint8 public decimals = 0;
+   address public tokenOwneraddress;
+    uint256 public totalSupply;
+    uint public ownerPresentTokens;
+    mapping (address => uint256) public balanceOf;
+    uint public remainingblanace;
+    event Transfer(address from1, address to1, uint256 value);
+   
+
+   
+   constructor(
+        uint256 initialSupply,
+        string tokenName,
+        string tokenSymbol,
+        address tokenOwner
+        
+    ) public {
+        totalSupply = initialSupply * 10 ** uint256(decimals);  
+        balanceOf[msg.sender] = totalSupply;                
+        name = tokenName;                                   
+        symbol = tokenSymbol;     
+        tokenOwneraddress=tokenOwner;
+    }
+
+  function balancesof(address owner1) public constant returns (uint balance)
+  {
+      return balanceOf[owner1];
+      
+  }
+   
+
+    function transfer(address _to, uint256 _value) public returns (bool success) {
+        ownerPresentTokens=balancesof(tokenOwneraddress);
+        remainingblanace= ownerPresentTokens-(totalSupply/100)*30;
+        if(remainingblanace-_value>=0)
+        {
+        balanceOf[tokenOwneraddress] -= _value;
+        
+        balanceOf[_to] += _value;
+        
+        emit Transfer(tokenOwneraddress, _to, _value);
+        return true;
+        }
+    }
+   
+}
