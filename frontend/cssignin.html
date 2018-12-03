@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    #container{
+      margin-top: 70px;
+      margin-left: 700px;
+    width: 50%;
+    }
+    #form{
+      background-color: #fff;
+      width:400px;
+      padding: 30px;
+      margin:20px;
+      color:#000;
+      border-radius:10px;
+    }
+    body{
+      background-color: #0667d0;
+      color: #fff;
+    }
+    .navbar{
+      background-color: #0667d0;
+      border:none;      
+    }
+    .navbar-inverse .navbar-brand{
+      color:#fff;
+    }
+    .navbar-inverse .navbar-nav>li>a{
+      color:#fff;
+    }
+    a{
+      color:white;
+      font-size: 15px
+    }
+  </style>
+</head>
+<body>
+​
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> signin</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container" id="container">
+      <h2>&emsp;&emsp;&emsp;&emsp; Sign in to</h2>
+  <form id='form'>
+      <div class="form-group" class="signin-wrapper">
+      <input type="email"  class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <input type="password"  class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <p id="list">
+<a href="#">Forgot password?&emsp;</a>
+<a href="#">Don't have an account?&emsp;</a>
+<a href="#">Privacy Policy&emsp;</a><br>
+</p>
+
+</div>
+
+</body>
+</html>
+
