@@ -1,4 +1,3 @@
-
 pragma solidity ^0.4.25;
 
 contract token {
@@ -16,7 +15,7 @@ contract Crowdsale {
     mapping(address => uint256) public balanceOf;
     bool fundingGoalReached = false;
     bool crowdsaleClosed = false;
-    address public address1;
+    address public senderAddress;
 
     event GoalReached(address recipient, uint totalAmountRaised);
     event FundTransfer(address backer, uint amount, bool isContribution);
@@ -35,14 +34,13 @@ contract Crowdsale {
         price = etherCostOfEachToken * 1 ether;
         tokenReward = token(addressOfTokenUsedAsReward);
     }
-    // uint x=tokenReward.Balance1();
-    
+  
     function () payable public {
         require(!crowdsaleClosed);
        
         uint amount = msg.value;
         balanceOf[msg.sender] += amount;
-        address1=msg.sender;
+        senderAddress = msg.sender;
         amountRaised += amount;
         tokenReward.transfer(msg.sender, amount / price);
        emit FundTransfer(msg.sender, amount, true);
@@ -82,6 +80,24 @@ contract Crowdsale {
             }
         }
     }
+    
+// mapping (address=>uint256) public totalTokenOwnedByUser;
+// address[] public tokenOwnedUser;
+// modifier onlyOwner(){
+//         require(msg.sender==beneficiary,"only owner can modify this function");
+//         _;
+//     }
+// uint256 public totalValue;
+// address public tokenAddress;
+// function transferEtherBackToUser() payable public onlyOwner {
+//         uint arrayLength = tokenOwnedUser.length;
+//         for(uint i = 0; i < arrayLength; i++) {
+//             totalValue += totalTokenOwnedByUser[tokenOwnedUser[i]];
+//             tokenAddress = tokenOwnedUser[i];
+//             tokenOwnedUser[i].transfer(totalTokenOwnedByUser[tokenOwnedUser[i]]);
+//         }
+
+//     }
     
    
 }
