@@ -1,15 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shopping Cart - InnovaMinex</title>
+    <title>Client Area - InnovaMinex</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- Styling -->
 <link href="css/customfont.css?family=Open+Sans:300,400,600|Raleway:400,700" rel="stylesheet">
 <link href="css/all.min.css?v=76f988" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +21,7 @@
 <![endif]-->
 
 <script type="text/javascript">
-    var csrfToken = '478d82ba4719459993c70ecc3f4b73ee4dbecda0',
+    var csrfToken = '7f1f5d3a98b138fcf0160806d45f558326a26962',
         markdownGuide = 'Markdown Guide',
         locale = 'en',
         saved = 'saved',
@@ -27,7 +29,6 @@
         whmcsBaseUrl = "";
 </script>
 <script src="js/scripts.min.js?v=76f988"></script>
-
 
     
     <link href="css/flags.css" rel="stylesheet">
@@ -43,53 +44,47 @@
         <ul class="top-nav">
                             <li>
                     <a href="#" class="choose-language" data-toggle="popover" id="languageChooser">
-                       English
+                                                                                                                                                <i class="flagstrap-icon flagstrap-us"></i>
+                         English
                         <b class="caret"></b>
                     </a>
                     <div id="languageChooserContent" class="hidden">
                         <ul>
                                                             <li>
-                                    <a href="/cart.php?a=confproduct&amp;i=0&amp;language=chinese">中文</a>
+                                    <a href="/clientarea.php?language=chinese">中文</a>
                                 </li>
                                                             <li>
-                                    <a href="/cart.php?a=confproduct&amp;i=0&amp;language=english">English</a>
+                                    <a href="/clientarea.php?language=english">English</a>
                                 </li>
                                                             <li>
-                                    <a href="/cart.php?a=confproduct&amp;i=0&amp;language=german">Deutsch</a>
+                                    <a href="/clientarea.php?language=german">Deutsch</a>
                                 </li>
                                                             <li>
-                                    <a href="/cart.php?a=confproduct&amp;i=0&amp;language=italian">Italiano</a>
+                                    <a href="/clientarea.php?language=italian">Italiano</a>
                                 </li>
                                                             <li>
-                                    <a href="/cart.php?a=confproduct&amp;i=0&amp;language=spanish">Español</a>
+                                    <a href="/clientarea.php?language=spanish">Español</a>
                                 </li>
                                                             <li>
-                                    <a href="/cart.php?a=confproduct&amp;i=0&amp;language=vietnamese">Tiếng Việt (Việt Nam)</a>
+                                    <a href="/clientarea.php?language=vietnamese">Tiếng Việt (Việt Nam)</a>
                                 </li>
                                                     </ul>
                     </div>
                 </li>
                                         <li>
-                    <a href="#" data-toggle="popover" id="accountNotifications" data-placement="bottom">
-                        Notifications
-                                                <b class="caret"></b>
-                    </a>
-                    <div id="accountNotificationsContent" class="hidden">
-                        <ul class="client-alerts">
-                                                    <li class="none">
-                                You have no notifications at this time.
-                            </li>
-                                                </ul>
-                    </div>
+                    <a href="/clientarea.php">Login</a>
                 </li>
-                <li class="primary-action">
-                    <a href="/logout.php" class="btn">
-                        Logout
+                                    <li>
+                        <a href="/register.php">Register</a>
+                    </li>
+                                <li class="primary-action">
+                    <a href="/cart.php?a=view" class="btn">
+                        View Cart
                     </a>
                 </li>
                                 </ul>
 
-                    <a href="/index.php" class="logo"><img src="img/logo.png" alt="InnovaMinex"></a>
+                    <a href="/index.php" class="logo"><img src="/assets/img/logo.png" alt="InnovaMinex"></a>
         
     </div>
 </section>
@@ -115,72 +110,14 @@
 
                             
                 <li menuItemName="Home" class="" id="Primary_Navbar-Home">
-        <a href="/clientarea.php">
+        <a href="/index.php">
                         <i class="fa fa-home"></i>                                </a>
                     </li>
-                        
+                        <li menuitemname="Store" class="" id="Primary_Navbar-Store"><a href="inx-sale.php"><strong>Buy INX</strong></a></li>
         
-                <li menuItemName="Services" class="dropdown" id="Primary_Navbar-Services">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        INX                        &nbsp;<b class="caret"></b>        </a>
-                    <ul class="dropdown-menu">
-                                
-                                                                        <li menuItemName="My Services" id="Primary_Navbar-Services-My_Services">
-                            <a href="/clientarea.php?action=services">
-                                                                My INX
-                                                            </a>
-                        </li>
-                                                                                                            <li menuItemName="Services Divider" class="nav-divider" id="Primary_Navbar-Services-Services_Divider">
-                            <a href="">
-                                                                -----
-                                                            </a>
-                        </li>
-                                                                                                        <!-- que no haga nada -->
-                                                                                                                <li><a href="inx-sale.php">Buy INX</a></li>              
-                                 
-            </ul>
-                    </li>
-                        
         
-                <li menuItemName="Billing" class="dropdown" id="Primary_Navbar-Billing">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Billing                        &nbsp;<b class="caret"></b>        </a>
-                    <ul class="dropdown-menu">
-                                
-                                                                        <li menuItemName="My Invoices" id="Primary_Navbar-Billing-My_Invoices">
-                            <a href="/clientarea.php?action=invoices">
-                                                                My orders and invoices
-                                                            </a>
-                        </li>
-                                                                                                        <!-- que no haga nada -->
-                                                                                                        <!-- que no haga nada -->
-                                                                                                        <!-- que no haga nada -->
-                                                                                 
-            </ul>
-                    </li>
-                        
-        
-                <li menuItemName="Support" class="dropdown" id="Primary_Navbar-Support">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Support                        &nbsp;<b class="caret"></b>        </a>
-                    <ul class="dropdown-menu">
-                            <li><a href="submitticket.php">Open Ticket</a></li>
-                                
-                                                                        <li menuItemName="Tickets" id="Primary_Navbar-Support-Tickets">
-                            <a href="/supporttickets.php">
-                                                                Tickets
-                                                            </a>
-                        </li>
-                                                                                                        <!-- que no haga nada -->
-                                                                                                        <!-- que no haga nada -->
-                                                                                 
-            </ul>
-                    </li>
-                        
-        
-                        
-        
-                                
+                
+            
         
                 <li menuItemName="Affiliates" class="dropdown" id="Primary_Navbar-Affiliates">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -194,6 +131,14 @@
             </li>
                         
         
+                <li menuItemName="Contact Us" class="" id="Primary_Navbar-Contact_Us">
+        <a href="/contact.php">
+                        Contact Us                                </a>
+                    </li>
+                        
+        
+                                
+        
                 <li menuItemName="inxwinwheels" class="" id="Primary_Navbar-inxwinwheels">
         <a href="/winwheel.php">
                         INX Win Wheel                                </a>
@@ -205,30 +150,19 @@
                 <ul class="nav navbar-nav navbar-right">
 
                             
-                <li menuItemName="Account" class="dropdown account" id="Secondary_Navbar-Account">
+                <li menuItemName="Account" class="dropdown" id="Secondary_Navbar-Account">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Hello, RadhaKrishna!                        &nbsp;<b class="caret"></b>        </a>
+                        Account                        &nbsp;<b class="caret"></b>        </a>
                     <ul class="dropdown-menu">
                                 
-                                                                        <li menuItemName="Edit Account Details" id="Secondary_Navbar-Account-Edit_Account_Details">
-                            <a href="/clientarea.php?action=details">
-                                                                Edit Account Details
+                                                                        <li menuItemName="Login" id="Secondary_Navbar-Account-Login">
+                            <a href="/clientarea.php">
+                                                                Login
                                                             </a>
                         </li>
-                                                                                                        <!-- que no haga nada -->
-                                                                                                            <li menuItemName="Change Password" id="Secondary_Navbar-Account-Change_Password">
-                            <a href="/clientarea.php?action=changepw">
-                                                                Change Password
-                                                            </a>
-                        </li>
-                                                                                                            <li menuItemName="Security Settings" id="Secondary_Navbar-Account-Security_Settings">
-                            <a href="/clientarea.php?action=security">
-                                                                Security Settings
-                                                            </a>
-                        </li>
-                                                                                                            <li menuItemName="Email History" id="Secondary_Navbar-Account-Email_History">
-                            <a href="/clientarea.php?action=emails">
-                                                                Email History
+                                                                                                            <li menuItemName="Register" id="Secondary_Navbar-Account-Register">
+                            <a href="/register.php">
+                                                                Register
                                                             </a>
                         </li>
                                                                                                             <li menuItemName="Divider" class="nav-divider" id="Secondary_Navbar-Account-Divider">
@@ -236,9 +170,9 @@
                                                                 -----
                                                             </a>
                         </li>
-                                                                                                            <li menuItemName="Logout" id="Secondary_Navbar-Account-Logout">
-                            <a href="/logout.php">
-                                                                Logout
+                                                                                                            <li menuItemName="Forgot Password?" id="Secondary_Navbar-Account-Forgot_Password?">
+                            <a href="/pwreset.php">
+                                                                Forgot Password?
                                                             </a>
                         </li>
                                                                                  
@@ -260,9 +194,6 @@
 <!-- Manda siempre a clientarea.php si no verificado -->
 
 
-                
-
-
 <section id="main-body">
   
 
@@ -275,64 +206,251 @@
             
 
 
-<div id="prodconfigcontainer">
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+<div class="logincontainer with-social">
 
-<div id="order-modern">
-
-<form id="orderfrm" onsubmit="catchEnter(event);">
-
-<input type="hidden" name="configure" value="true" />
-<input type="hidden" name="i" value="0" />
-
-    <div class="title-bar">
-        <h1>INX purchase</h1>
+    <div class="header-lined">
+    <h1>Login <small>This page is restricted</small></h1>
     </div>
 
-<div id="configproducterror" class="errorbox"></div>
 
-<div class="row">
-<div class="col-md-8">
+    
+    <div class="providerLinkingFeedback"></div>
 
+    <div class="row">
+        <div class="col-sm-7">
 
+            <form method="post" action="https://members.innovaminex.com/dologin.php" class="login-form" role="form">
+<input type="hidden" name="token" value="7f1f5d3a98b138fcf0160806d45f558326a26962" />
 
-<h3> Quantity of INX </h3>
-<div class="configoptions">
-<table width="100%" cellspacing="0" cellpadding="0" class="configtable">
-<tr><td class="fieldlabel"><img src="img/moneda.png" style="max-width:100px"></td><td class="fieldarea">
-<input type="text" name="configoption[19]" value="1" size="5" onkeyup="recalctotals()" class="form-control" /> x Pre-ico $0,35USD
-</td></tr>
-</table>
-</div>
+                <p>&nbsp;</p>
+                <div class="form-group">
+                    <label for="inputEmail">Email Address</label>
+                    <input type="email" name="username" class="form-control" id="inputEmail" placeholder="" autofocus>
+                </div>
 
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="" autocomplete="off" >
+                </div>
 
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="rememberme" /> Remember Me
+                    </label>
+                </div>
+                <p>&nbsp;</p>
 
-</div>
-<div class="col-md-4">
-    <div>
-        <div id="cartLoader" class="pull-right">
-            <i class="fa fa-fw fa-refresh fa-spin"></i>
+                <input id="login" type="submit" class="btn btn-primary" value="Login" /> <a href="pwreset.php" class="btn btn-default">Forgot Password?</a>
+
+            </form>
+
         </div>
-        <h3>Order Summary</h3>
+        <div class="col-sm-5">
+                        
+    <div id="providerLinkingMessages" class="hidden">
+        <p class="providerLinkingMsg-preLink-init_failed">
+            <span class="provider-name"></span> is unavailable at this time. Please try again later.
+        </p>
+        <p class="providerLinkingMsg-preLink-connect_error">
+            <strong>Error</strong> We were unable to connect your account. Please contact your system administrator.
+        </p>
+        <p class="providerLinkingMsg-preLink-complete_sign_in">
+            Please complete sign in with your chosen service provider.
+        </p>
+        <p class="providerLinkingMsg-preLink-2fa_needed">
+            Automatic sign-in successful! Redirecting...
+        </p>
+        <p class="providerLinkingMsg-preLink-linking_complete">
+            <strong>Success!</strong> Your account is now linked with your :displayName account.
+        </p>
+        <p class="providerLinkingMsg-preLink-login_to_link-signin-required">
+            <strong>Link Initiated!</strong> Please complete sign in to associate this service with your existing account. You will only have to do this once.
+        </p>
+        <p class="providerLinkingMsg-preLink-login_to_link-registration-required">
+            <strong>Link Initiated!</strong> Please complete the registration form below.
+        </p>
+        <p class="providerLinkingMsg-preLink-checkout-new">
+            <strong>Link Initiated!</strong> Please complete your new account information.
+        </p>
+        <p class="providerLinkingMsg-preLink-other_user_exists">
+            <strong>Error</strong> This account is already connected to an existing account with us. Please choose a different account at the third party authentication provider.
+        </p>
+        <p class="providerLinkingMsg-preLink-already_linked">
+            <strong>Error</strong> This account is already connected to your account with us. Please choose a different account at the third party authentication provider.
+        </p>
+        <p class="providerLinkingMsg-preLink-default">
+            <strong>Error</strong> We were unable to connect your account. Please contact your system administrator.
+        </p>
     </div>
-    <div class="ordersummary" id="producttotal"></div>
-</div>
 
-<div class="text-center">
-    <button type="button" id="btnCompleteProductConfig" class="btn btn-primary btn-lg" onclick="addtocart();">Continue &nbsp;<i class="fa fa-arrow-circle-right"></i></button><br /><br />
-    <!-- <a href="cart.php?a=view" class="btn btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a> -->
-</div>
+    
+    <div class="providerPreLinking" data-link-context="login"
+         data-hide-on-prelink=0         data-disable-on-prelink=0>
+        <div class="social-signin-btns">
+                                                <script>
+    window.onerror = function(e){
+        WHMCS.authn.provider.displayError();
+    };
 
-</div>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : "357896371648586",
+            cookie     : true,  // enable cookies to allow the server to access the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : "v2.8" // use graph api version 2.8
+        });
+    };
 
-<script>recalctotals();</script>
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, "script", "facebook-jssdk"));
 
-</form>
+    function onLoginClick() {
+        WHMCS.authn.provider.preLinkInit();
 
-</div>
+        FB.login(
+            function(response) {
+                var feedbackContainer = jQuery(".providerLinkingFeedback");
+                var btnContainer = jQuery(".providerPreLinking");
+
+                var failIfExists = 0;
+                if ("login" === "register"
+                   || "login" === "connect"
+                ) {
+                    failIfExists = 1;
+                }
+                
+                var context = {
+                    htmlTarget: "login",
+                    targetLogin: "login",
+                    targetRegister: "register",
+                    redirectUrl: "/clientarea.php"
+                };
+
+                if (response.status === 'connected') {
+                    var config = {
+                        url: "/index.php?rp=/auth/provider/facebook_signin/finalize",
+                        method: "POST",
+                        dataType: "json",
+                        data: {
+                            accessToken: response.authResponse.accessToken,
+                            fail_if_exists: failIfExists
+                        }
+                    };
+                    var provider = {
+                        name: "Facebook",
+                        icon:  "<i class=\"fab fa-facebook-f\"></i> "
+                    };
+
+                    var providerDone = function () { FB = null; };
+                    var providerError = function () {};
+                } else if (!response.status) {
+                    response.status = "unknown";
+                }
+
+                switch (response.status) {
+                    case "connected":
+                        WHMCS.authn.provider.signIn(config, context, provider, providerDone, providerError);
+                        break;
+                    case "not_authorized":
+                        feedbackContainer.html("You did not authorize use of Facebook for authentication. We can\'t use it to log you in.").slideDown();
+                        break;
+                    case "unknown":
+                        feedbackContainer.slideUp();
+                }
+            });
+    }
+</script>
+        <button class="btn btn-social btn-facebook fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" data-scope="public_profile,email" onclick="onLoginClick()" type="button">
+            <i class="fab fa-facebook-f"></i>
+            Sign in with Facebook
+        </button>
+                                                                <script>
+    window.onerror = function(e){
+        WHMCS.authn.provider.displayError();
+    };
+
+    var googleUser = {};
+    var startGoogleApp = function() {
+        gapi.load('auth2', function() {
+            gapi.auth2.init({
+                client_id: '269374505682-khpopi2o4omgo8at01j8nhrp6743ej1v.apps.googleusercontent.com',
+                cookiepolicy: 'https://members.innovaminex.com'
+            }).then(function(response) {
+                jQuery('.btn-google').each(function (i, el) {
+                    response.attachClickHandler(el, {},
+                        function (googleUser) {
+                            onSignIn(googleUser);
+                        }
+                    );
+                });
+            }, function(reason) {
+                if (reason.error == 'idpiframe_initialization_failed') {
+                    jQuery('.btn-google').click(function(e) {
+                        WHMCS.authn.provider.displayError('Google Sign-In', 'init_failed', reason.details);
+                    });
+                } else {
+                    jQuery('.btn-google').click(function(e) {
+                        WHMCS.authn.provider.displayError('Google Sign-In');
+                    });
+                }
+            });
+        });
+    };
+
+    function onSignIn(googleUser) {
+        WHMCS.authn.provider.preLinkInit();
+
+        var failIfExists = 0;
+        if ("login" === "register"
+           || "login" === "connect"
+        ) {
+            failIfExists = 1;
+        }
+        
+        var context = {
+            htmlTarget: "login",
+            targetLogin: "login",
+            targetRegister: "register",
+            redirectUrl: "/clientarea.php"
+        };
+        var config = {
+            url: "/index.php?rp=/auth/provider/google_signin/finalize",
+            method: "POST",
+            dataType: "json",
+            data: {
+                id_token: googleUser.getAuthResponse().id_token,
+                fail_if_exists: failIfExists
+            }
+        };
+        var provider = {
+            "name": "Google",
+            "icon":  "<i class=\"fab fa-google\"></i> "
+        };
+
+        var providerDone = function () { gapi.auth2.getAuthInstance().signOut(); };
+        var providerError = function () { gapi.auth2.getAuthInstance().signOut(); };
+
+        WHMCS.authn.provider.signIn(config, context, provider, providerDone, providerError);
+    }
+
+</script>
+<script src="https://apis.google.com/js/platform.js?onload=startGoogleApp" async defer></script>
+            <button id="btnGoogleSignin1" class="btn btn-social btn-google" type="button">
+                <i class="fab fa-google"></i>
+                Sign in with Google
+            </button>
+                                    </div>
+    </div>
+
+    
+                    </div>
+    </div>
 </div>
 
 
@@ -348,7 +466,7 @@
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
                 <div class="row">
                     <div class="col-sm-12 col-md-4 text-center">
-                        <p><img src="img/logo-retina.png" alt="logo" style="max-width:219px;width:100%;margin:0 auto"></p>
+                        <p><img src="/templates/six/img/logo-retina.png" alt="logo" style="max-width:219px;width:100%;margin:0 auto"></p>
                                
                         <div class="socials inline-inside text-center" style="margin-top:30px">
                             <a class="socials-item" href="https://github.com/innovaminex/" target="_blank" title="Github"><i class="fab fa-github" style="color:#fff !important;"></i></a>
@@ -538,4 +656,7 @@ $(document).ready(function(){
     e.preventDefault();
   });
   </script>
+
+
 </body>
+</html>
